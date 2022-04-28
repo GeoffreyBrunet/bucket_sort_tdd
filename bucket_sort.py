@@ -15,7 +15,10 @@ def sort(arr):
             if(diff == 0 and arr[i] != min_ele):
                 temp[int((arr[i] - min_ele) / rnge) - 1].append(arr[i])
             else:
-                temp[int((arr[i] - min_ele) / rnge)].append(arr[i])  
+                temp[int((arr[i] - min_ele) / rnge)].append(arr[i]) 
+        for i in range(len(temp)):
+            if len(temp[i]) != 0:
+                temp[i].sort() 
         k = 0
         for lst in temp:
             if lst:
